@@ -4,14 +4,16 @@ import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-na
 
 export default function EmojiSticker({ imageSize, stickerSource }) {
   const scaleImage = useSharedValue(imageSize)
+  const translateX = useSharedValue(0);
+  const translateY = useSharedValue(0);
 
   const doubleTap = Gesture.Tap()
-  .numberOfTaps(2)
-  .onStart(() => {
-    if (scaleImage.value !== imageSize * 2) {
-      scaleImage.value = scaleImage.value * 2;
-    }
-  });
+    .numberOfTaps(2)
+    .onStart(() => {
+      if (scaleImage.value !== imageSize * 2) {
+        scaleImage.value = scaleImage.value * 2;
+      }
+    });
 
   const imageStyle = useAnimatedStyle(() => {
     return {
@@ -20,15 +22,37 @@ export default function EmojiSticker({ imageSize, stickerSource }) {
     };
   });
 
+  const drag = Gesture.Pan()
+    .onChange((event) => {
+      translateX.value += event.changeX;
+      translateY.value += event.changeY;
+    });
+
+  const containerStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          translateX: translateX.value,
+        },
+        {
+          translateY: translateY.value,
+        },
+      ],
+    };
+  });
+
+
   return (
-    <View style={{ top: -50, right: -260 }}>
-      <GestureDetector gesture={doubleTap}>
-      <Animated.Image
-        source={stickerSource}
-        resizeMode="contain"
-        style={[imageStyle, { width: imageSize, height: imageSize }]}
-      />
-      </GestureDetector>
-    </View>
+    <GestureDetector gesture={drag}>
+      <Animated.View style={[containerStyle, { top: -50, right: -260 }]}>
+        <GestureDetector gesture={doubleTap}>
+          <Animated.Image
+            source={stickerSource}
+            resizeMode="contain"
+            style={[imageStyle, { width: imageSize, height: imageSize }]}
+          />
+        </GestureDetector>
+      </Animated.View>
+    </GestureDetector>
   );
 }
