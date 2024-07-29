@@ -1,31 +1,27 @@
-# 😜 sticker-smash
+# 😜 Sticker-smash
 
-<div>
-  <img src="https://github.com/francisdiasbr/sticker-smash/assets/62484067/5c9f414f-8f4d-49c6-9e86-651ae3e00b95" alt="appicon" style="float: right; margin-left: 10px;" width="100">
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/9a552cf3-8fd2-4e7e-b1b7-128d631fbaae" alt="stick-smash-sticker-screen" width="300">
 </div>
 
-## Sobre
 
-  Sticker-smash é um aplicativo universal para Android, iOS e web.
+## ✨ About
 
-  - Usa o sistema do dispositivo para selecionar uma imagem da biblioteca de mídia e aplicar um sticker em cima da imagem
-  - Utiliza com gestos de toque para interagir com o sticker
-  - Captura um screenshot e salva em disco
+Sticker-smash is a universal app for Android, iOS, and web.
 
-
-
-https://github.com/francisdiasbr/sticker-smash/assets/62484067/60e710c7-e48d-4e39-8c72-324b6857e0cb
+Uses the device system to select an image from the media library and apply a sticker on top of the image;
+Uses touch gestures to interact with the sticker;
+Captures a screenshot and saves it to disk.
 
 
+## ✨ Requirements
 
-## Requisitos
-
-- [Expo Go](https://expo.dev/go) em um dispositivo físico
+- [Expo Go](https://expo.dev/go) on a physical device
 - Node.js
 
-## Installation
+## ✨ Installation
 
-sticker-smash pode ser instalado em um passo:
+Sticker-smash can be installed in one step:
 
 ### with npm
 `npm install`
@@ -33,6 +29,11 @@ sticker-smash pode ser instalado em um passo:
 ### with yarn
 `yarn`
 
-## Inicializando o projeto
+## ✨ Initialization
 
 `npx expo start`
+
+
+## ✨ Screen
+
+https://github.com/francisdiasbr/sticker-smash/assets/62484067/60e710c7-e48d-4e39-8c72-324b6857e0cb
