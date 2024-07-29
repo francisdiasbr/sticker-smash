@@ -1,5 +1,11 @@
 # 😜 Sticker-smash
 
+
+**Portuguese:** [Leia o README em português](https://github.com/francisdiasbr/sticker-smash/blob/main/README.pt.md)
+
+
+
+
 <div align="center">
   <img src="https://github.com/user-attachments/assets/9a552cf3-8fd2-4e7e-b1b7-128d631fbaae" alt="stick-smash-sticker-screen" width="300">
 </div>
@@ -7,7 +13,7 @@
 
 ## ✨ About
 
-Sticker-smash is a universal app for Android, iOS, and web.
+[Sticker-smash](https://github.com/francisdiasbr/sticker-smash/assets/62484067/60e710c7-e48d-4e39-8c72-324b6857e0cb) is a universal app for Android, iOS, and web.
 
 Uses the device system to select an image from the media library and apply a sticker on top of the image;
 Uses touch gestures to interact with the sticker;
